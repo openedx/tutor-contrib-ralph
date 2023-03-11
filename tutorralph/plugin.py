@@ -195,7 +195,7 @@ ralph:
       - "-b"
       - "clickhouse"
     volumes:
-      - ../../env/plugins/ralph/apps/config/.ralph:/app/.ralph
+      - ../../env/plugins/ralph/apps/config/ralph_auth/:/app/.ralph
         """
     )
 )
