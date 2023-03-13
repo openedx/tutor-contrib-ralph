@@ -180,7 +180,8 @@ hooks.Filters.ENV_PATCHES.add_item(
 ralph:
     image: docker.io/fundocker/ralph:master
     depends_on:
-      - clickhouse
+      clickhouse:
+        condition: service_healthy
     env_file:
       - ../../env/plugins/ralph/apps/config/env
     ports:
